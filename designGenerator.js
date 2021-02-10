@@ -65,38 +65,24 @@ function foods(foods) {
 }
 function designTemplate(design) {
   return `
-    <div class="mt-5 col-sm-1 col-md-1 col-lg-3 col-xl-3 mb-5 pb-5">
-     <div class="card" style="18rm">
-      <div class="card-body">
-        <h5 class="card-title">${design.name}</h5>
-         <p class="card-text">${design.description} </p>
-              <a href="${design.link}" class="btn btn-primary btn-sm"
-                >Preview</a
-              >
-              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#confirmModal">
-          Select
-        </button>
-            </div>
-          </div>
-        </div>
-    `;
-}
-// function petTemplate(pet) {
-//   return `
-//       <div class="animal">
-//       <img class="pet-photo" src="${pet.photo}">
-//       <h2 class="pet-name">${pet.name} <span class="species">(${pet.species})</span></h2>
-//       <p><strong>Age:</strong> ${age(pet.birthYear)}</p>
-//       ${pet.favFoods ? foods(pet.favFoods) : ''}
-//       </div>
-//     `;
-// }
+  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 mt-5">
+  <div class="card bg-light mb-3" style="18rm">
+   <div class="card-body">
+   
+     <h5 class="card-title">${design.name}</h5>
+      <p class="card-text">${design.description} </p>
+           <a href="${design.link}" class="btn btn-primary btn-sm"
+             >Preview</a
+           >
+           <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#confirmModal">Select</button>
+           
 
-// document.getElementById('app').innerHTML = `
-//     <h1 class="app-title">Pets (${designData.length} results)</h1>
-//     ${designData.map(petTemplate).join('')}
-//     <p class="footer">These ${designData.length} pets were added recently. Check back soon for updates.</p>
-//   `;
+         </div>
+       </div>
+     </div>
+ `;
+}
+
 document.getElementById('app').innerHTML = `
   
   ${designData.map(designTemplate).join('')}
