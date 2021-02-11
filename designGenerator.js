@@ -71,7 +71,7 @@ function designTemplate(design) {
    
      <h5 class="card-title">${design.name}</h5>
       <p class="card-text">${design.description} </p>
-           <a href="${design.link}" target="blank" class="btn btn-primary btn-sm"
+           <a href="${design.link}" target="_blank" class="btn btn-primary btn-sm"
              >Preview</a
            >
            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#confirmModal">Select</button>
